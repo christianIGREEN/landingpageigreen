@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>☀️ Economize 10% na Sua Conta de Luz com Energia Solar!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Documentação CSS: Reset e Variáveis */
+        :root {
+            --cor-primaria: #FFC107; /* Amarelo/Sol para destaque */
+            --cor-secundaria: #008000; /* Verde para energia limpa */
+            --cor-texto: #333;
+            --cor-fundo: #f8f9fa;
+            --cor-botao-texto: #fff;
+            --sombra-leve: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--cor-texto);
+            background-color: var(--cor-fundo);
+        }
+
+        /* Documentação CSS: Container Principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Documentação CSS: Cabeçalho e Títulos */
+        header {
+            background-color: var(--cor-secundaria);
+            color: var(--cor-botao-texto);
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .titulo-principal {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .subtitulo {
+            font-size: 1.2em;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+        
+        /* Documentação CSS: Layout Principal - Conteúdo e Formulário */
+        .main-content {
+            display: flex;
+            gap: 40px;
+            padding: 40px 20px;
+            align-items: flex-start; /* Alinha o conteúdo ao topo */
+        }
+        
+        .content-area {
+            flex: 1;
+            max-width: 60%; /* Espaço maior para o texto em desktop */
+        }
+        
+        .form-area {
+            flex: 1;
+            max-width: 40%; /* Espaço menor para o formulário em desktop */
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--sombra-leve);
+            position: sticky; /* Mantém o formulário visível ao rolar */
+            top: 20px;
+        }
+
+        /* Documentação CSS: Seção de Vantagens */
+        .vantagens-titulo {
+            font-size: 1.8em;
+            color: var(--cor-secundaria);
+            margin-bottom: 20px;
+            border-bottom: 3px solid var(--cor-primaria);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .vantagens-lista {
+            list-style: none;
+        }
+
+        .vantagens-lista li {
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="%23FFC107" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8.59l-9 9z"/></svg>') no-repeat left center;
+            background-size: 20px;
+            padding-left: 30px;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+
+        .vantagens-lista span {
+            font-weight: 400; /* Detalhes com peso de fonte normal */
+        }
+
+        /* Documentação CSS: Estilização do Formulário */
+        .form-area h3 {
+            text-align: center;
+            color: var(--cor-secundaria);
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        /* Documentação CSS: Botão de Ação Proeminente */
+        .btn-submit {
+            width: 100%;
+            background-color: var(--cor-primaria);
+            color: var(--cor-texto); /* Texto escuro no botão amarelo para alto contraste */
+            font-size: 1.2em;
+            font-weight: 700;
+            padding: 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.1s;
+            box-shadow: 0 4px 0px #e0a800; /* Sombra inferior para efeito 3D */
+            margin-top: 10px;
+            text-transform: uppercase;
+        }
+
+        .btn-submit:hover {
+            background-color: #ffda6a;
+            transform: translateY(2px); /* Efeito de "apertar" */
+            box-shadow: 0 2px 0px #e0a800;
+        }
+
+        /* Documentação CSS: Rodapé */
+        footer {
+            background-color: #343a40;
+            color: #ccc;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        .rodape-como-funciona {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #495057;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        .rodape-como-funciona strong {
+            color: var(--cor-primaria);
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        /* Documentação CSS: Media Query para Responsividade */
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column; /* Empilha as seções em telas pequenas */
+            }
+            
+            .content-area, .form-area {
+                max-width: 100%; /* Ocupa a largura total */
+            }
+            
+            .form-area {
+                order: -1; /* Coloca o formulário acima do conteúdo em mobile */
+                position: static; /* Remove o sticky em mobile */
+                margin-bottom: 30px;
+            }
+
+            .titulo-principal {
+                font-size: 2em;
+            }
+            
+            .vantagens-lista li {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="titulo-principal">♻️ Reduza 10% da Sua Conta de Luz e Ajude o Meio Ambiente Sem Custo?</h1>
+            <p class="subtitulo">Mude para a energia mais limpa e comece a economizar. Sem taxa, sem fidelidade e sem mudar de concessionária.</p>
+        </div>
+    </header>
+
+    <div class="container main-content">
+        
+        <section class="content-area">
+            <h2 class="vantagens-titulo">Por que mudar para a Energia Solar?</h2>
+            <ul class="vantagens-lista">
+                <li>**10% de Desconto Garantido:** <span>Reduza sua conta de luz todo mês.</span></li>
+                <li>**Energia 100% Sustentável:** <span>Consuma energia gerada por usinas solares.</span></li>
+                <li>**Zero Taxa de Adesão:** <span>Não há custo para começar a economizar.</span></li>
+                <li>**Sem Fidelidade:** <span>Você pode cancelar a qualquer momento.</span></li>
+                <li>**Processo Simples e Online:** <span>Cadastro rápido, sem burocracia.</span></li>
+                <li>**Sem Mudança de Distribuidora:** <span>Você recebe sua conta direto no seu smartfone.</span></li>
+            </ul>
+        </section>
+
+        <aside class="form-area">
+            <h3>Comece a Economizar Agora!</h3>
+            <form action="https://digital.igreenenergy.com.br/?id=91191" method="GET">
+                
+                <div class="form-group">
+                    <label for="nome">Nome Completo *</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail *</label>
+                    <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefone">Telefone/WhatsApp *</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
+                </div>
+                             
+                <div class="form-group">
+                    <label for="cep">CEP *</label>
+                    <input type="text" id="cep" name="cep" placeholder="00000-000" required>
+                </div>
+
+                <input type="hidden" name="id" value="911">
+
+                <button type="submit" class="btn-submit">
+                    QUERO ME CADASTRAR E ECONOMIZAR!
+                </button>
+            </form>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="rodape-como-funciona">
+            <strong>Como Funciona? (O Detalhe Legal e Sustentável)</strong>
+            <p>Você se conecta a uma Comercializadora de Energia que já injeta energia solar na rede da sua distribuidora. Ao se cadastrar, você passa a consumir essa energia sustentável. A distribuidora retorna créditos de desconto para a usina, e você recebe seu desconto de 10% diretamente na sua fatura dentro de um prazo de 90 dias. É simples, legal e faz bem para o planeta.</p>
+        </div>
+        <p>&copy; 2024 - Energia Solar Sustentável. Todos os direitos reservados.</p>
+    </footer>
+<script>
+    // Documentação JS: Funções de Formatação
+
+    // Função genérica para aplicar máscaras
+    const aplicarMascara = (campo, mascara, evento) => {
+        const valorOriginal = campo.value.replace(/\D/g, ''); // Remove tudo que não for dígito
+        let valorMascara = '';
+        let k = 0; // Ponteiro para o valor original
+        
+        for (let i = 0; i < mascara.length; i++) {
+            if (k >= valorOriginal.length) {
+                break;
+            }
+            if (mascara[i] === '#') {
+                valorMascara += valorOriginal[k];
+                k++;
+            } else {
+                valorMascara += mascara[i];
+            }
+        }
+        campo.value = valorMascara;
+    };
+
+    // Documentação JS: Máscara para Telefone/WhatsApp (8 ou 9 dígitos + DDD)
+    const mascaraTelefone = (campo) => {
+        let mascara;
+        const valorLimpo = campo.value.replace(/\D/g, '');
+        
+        // Se tiver 11 dígitos (incluindo DDD e 9), aplica (XX) XXXXX-XXXX
+        if (valorLimpo.length > 10) { 
+            mascara = '(##) #####-####';
+        } else {
+            // Se tiver 10 dígitos (incluindo DDD), aplica (XX) XXXX-XXXX
+            mascara = '(##) ####-####';
+        }
+
+        aplicarMascara(campo, mascara);
+    };
+
+    // Documentação JS: Máscara para CPF/CNPJ
+    const mascaraDocumento = (campo) => {
+        const valorLimpo = campo.value.replace(/\D/g, '');
+        let mascara;
+        
+        if (valorLimpo.length <= 11) {
+            // CPF: ###.###.###-##
+            mascara = '###.###.###-##';
+        } else {
+            // CNPJ: ##.###.###/####-##
+            mascara = '##.###.###/####-##';
+        }
+        
+        aplicarMascara(campo, mascara);
+    };
+
+    // Documentação JS: Máscara para CEP
+    const mascaraCEP = (campo) => {
+        // CEP: #####-###
+        aplicarMascara(campo, '#####-###');
+    };
+
+    // Documentação JS: Associação dos Eventos aos Campos do Formulário
+    document.addEventListener('DOMContentLoaded', () => {
+        // Obtém as referências dos campos usando os IDs que definimos no HTML
+        const inputTelefone = document.getElementById('telefone');
+        const inputDocumento = document.getElementById('documento');
+        const inputCEP = document.getElementById('cep');
+
+        // Adiciona um "listener" (observador) para cada vez que uma tecla é levantada (keyup)
+        if (inputTelefone) {
+            inputTelefone.addEventListener('keyup', () => mascaraTelefone(inputTelefone));
+            inputTelefone.maxLength = 15; // Limite de tamanho para (XX) XXXXX-XXXX
+        }
+        
+        if (inputDocumento) {
+            inputDocumento.addEventListener('keyup', () => mascaraDocumento(inputDocumento));
+            inputDocumento.maxLength = 18; // Limite de tamanho para CNPJ
+        }
+
+        if (inputCEP) {
+            inputCEP.addEventListener('keyup', () => mascaraCEP(inputCEP));
+            inputCEP.maxLength = 9; // Limite de tamanho para CEP
+        }
+    });
+</script>
+</body>
+</html>
